@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "pp-dtcw"
+version = "0.1.0"
+description = ""
+authors = ["Rose van Bracht <veebeerose@gmail.com@gmail.com>"]
+readme = "README.md"
+packages = [{include = "pp_dtcw", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = {version = "^8.3.4", optional = true}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
