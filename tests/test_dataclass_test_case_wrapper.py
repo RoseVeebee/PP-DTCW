@@ -1,4 +1,5 @@
 import pytest
+import logging
 from dataclasses import dataclass # NOTE: `@dataclass` variables REQUIRE type hinting.
 from pp_dtcw.dataclass_test_case_wrapper import DataclassTestCaseWrapper, rdy_entries_for_parametrization
 
@@ -40,5 +41,7 @@ class TestWrapper:
         int_b: int,
         float_c: float,
         expected_bool: bool | None,
+        request: pytest.FixtureRequest,
     ):
-        print(f"str_a: {str_a}, int_b: {int_b}, float_c: {float_c}, expected_bool: {expected_bool}")
+        logging.info(f"id = {request.node.callspec.id}")
+        logging.info(f"str_a: {str_a}, int_b: {int_b}, float_c: {float_c}, expected_bool: {expected_bool}")
