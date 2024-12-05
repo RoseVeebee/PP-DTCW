@@ -8,6 +8,12 @@ Provides a way to expose @dataclass variables to `@pytest.mark.parametrize()` de
 ## Example usage
 See the docstring of the `DataclassTestCaseWrapper` class in `./src/pp_dtcw/_dataclass_test_case_wrapper.py`.
 
+To run the the test file in `./tests`:
+1. Have Poetry installed
+2. Navigate to project dir in terminal
+3. `poetry shell`
+4. `poetry install --with test`
+
 ## Detailed info
 Pytest parametrization, using `@pytest.mark.parametrize()`, supports default id generation when no explicit id is given. However, if any of the `argvalues` is a 'complex' object, e.g. a class`, pytest default id generation will simply yield the name of the object followed by an increasing number based on the number of that object we're parametrizing.
 
