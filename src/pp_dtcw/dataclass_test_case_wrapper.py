@@ -12,6 +12,7 @@ class DataclassTestCaseWrapper:
     Example usage:
 
     .. code-block:: python
+    
         from dataclasses import dataclass
         from dataclass_test_case_wrapper import DataclassTestCaseWrapper, rdy_entries_for_parametrization
 
